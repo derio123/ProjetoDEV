@@ -5,6 +5,7 @@ import ListUserComponent from "./component/user/listUserComponent";
 import AddUserComponent from "./component/user/addUserComponent";
 import EditUserComponent from "./component/user/editUserComponent";
 import Header from './component/header';
+import Footer from './component/footer';
 
 class App extends Component {
 
@@ -22,6 +23,7 @@ class App extends Component {
             </Switch>
           </div>
         </Router>
+        <Footer/>
       </div>
     );
   }
