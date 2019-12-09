@@ -1,0 +1,13 @@
+footer#main-foo {
+    height: 60px;
+    background-color: #0B243B;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 38%;
+    flex: 1;
+}
