@@ -43,7 +43,7 @@ class ListUserComponent extends Component {
         return (
             <div>
                 <h2 className="text-center">User Details</h2>
-                <button className="btn btn-danger" onClick={() => this.inserirUser()}>Adicionar</button>
+
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -57,25 +57,28 @@ class ListUserComponent extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            this.state.users.map(
-                                user =>
-                                    <tr key={user.id}>
-                                        <td>{user.nome}</td>
-                                        <td>{user.cpf}</td>
-                                        <td>{user.email}</td>
-                                        <td>{user.endereco}</td>
-                                        <td>{user.telefone}</td>
-                                        <td>
-                                            <button className="btn btn-success" onClick={() => this.removeUser(user.id)}> Remove</button>
-                                            <button className="btn btn-success" onClick={() => this.attUser(user.id)}> Editar</button>
-                                        </td>
-                                    </tr>
-                            )
-                        }
+                        {this.state.users.map(user =>
+                            <tr key={user.id}>
+                                <td>{user.nome}</td>
+                                <td>{user.cpf}</td>
+                                <td>{user.email}</td>
+                                <td>{user.endereco}</td>
+                                <td>{user.telefone}</td>
+                                <td><button className="btn btn-danger" onClick={() => this.removeUser(user.id)}>
+                                    Remove
+                                     </button>
+                                    <button className="btn btn-warning" onClick={() => this.attUser(user.id)}>
+                                        Editar
+                                    </button>
+                                </td>
+                            </tr>)}
                     </tbody>
                 </table>
-
+                <div class="text-right">
+                    <button className="btn btn-primary material-icons md-18 md-dark ml-2" onClick={() => this.inserirUser()}>
+                        Adicionar
+                    </button>
+                </div>
             </div>
         );
     }
